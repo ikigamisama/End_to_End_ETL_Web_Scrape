@@ -1,0 +1,7 @@
+# Dockerfile.airflow
+FROM apache/airflow:2.8.1-python3.11
+
+USER airflow
+RUN pip install --no-cache-dir beautifulsoup4 python-dotenv asyncio nest_asyncio playwright fake_useragent tenacity SQLAlchemy
+
+ENV PYTHONPATH="/opt/airflow"

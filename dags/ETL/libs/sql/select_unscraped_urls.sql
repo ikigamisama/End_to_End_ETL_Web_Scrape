@@ -1,0 +1,1 @@
+SELECT DISTINCT id, url FROM etl.urls WHERE scrape_status<>'DONE' AND shop='{shop}';
