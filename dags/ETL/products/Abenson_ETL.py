@@ -110,7 +110,7 @@ class AbensonETL(ProductsETL):
                 await browser.close()
 
     def transform(self, soup, url) -> pd.DataFrame:
-        product_shop = 'Abenson'
+        product_shop = self.SHOP
         product_name = soup.find(
             'h1', class_="productFullDetail-productName-2jb").get_text()
         product_brand = soup.find(
@@ -226,9 +226,9 @@ class AbensonETL(ProductsETL):
 
     def extract_links(self, url: str) -> pd.DataFrame:
         soup_product_list = asyncio.run(self._scroll_products(url))
-        urls = ['https://www.abenson.com' +
+        urls = [self.URL +
                 product_html.find('a').get('href') for product_html in soup_product_list]
 
         df = pd.DataFrame({"url": urls})
-        df.insert(0, "shop", "Abenson")
+        df.insert(0, "shop", self.SHOP)
         return df

@@ -6,7 +6,7 @@ from .Emcor_ETL import EmcorETL
 from .Kimstore_ETL import KimStoreETL
 from .Mxmemoxpress_ETL import MxmemoxpressETL
 from .Myphone_ETL import MyPhoneETL
-from .Pxc_ETL import PcxETL
+from .Pcx_ETL import PcxETL
 from .Savenearn_ETL import SavenearnETL
 from .Vivoglobal_ETL import VivoGlobalETL
 from .Western_ETL import WesternETL

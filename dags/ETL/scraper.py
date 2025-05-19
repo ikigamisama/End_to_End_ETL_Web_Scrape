@@ -43,12 +43,12 @@ def launch_etl(shop: str, selector: str):
         "CompAsia": CompAsiaETL('CompAsia', 'https://compasia.com.ph', '/collections/smartphones'),
         'Emcor': EmcorETL("Emcor", 'https://emcor.com.ph', '/product-category/it-products/smartphone/'),
         "KimStore": KimStoreETL('KimStore', 'https://www.kimstore.com', '/collections/smartphones'),
-        "MxMemoXpress": MxmemoxpressETL("MxMemoXpress", 'https://mxmemoxpress.com', '/all-mobiles/'),
-        'MyPhone': MyPhoneETL("MyPhone", 'https://www.myphone.com.ph', '/smartphone/'),
+        "MxMemoXpress": MxmemoxpressETL("MxMemoXpress", 'https://mxmemoxpress.com', '/all-mobiles'),
+        'MyPhone': MyPhoneETL("MyPhone", 'https://www.myphone.com.ph', '/smartphone'),
         "PCX": PcxETL('PCX', 'https://pcx.com.ph', '/collections/smartphones'),
         "SavenEarn": SavenearnETL("SavenEarn", 'https://savenearn.com.ph', '/collections/smartphone'),
         'VivoGlobal': VivoGlobalETL("VivoGlobal", 'https://shop.vivoglobal.ph', '/collections/all-phones'),
-        'Western': WesternETL("Western", 'https://western.com.ph', '/shop/gadgets/smartphones/'),
+        'Western': WesternETL("Western", 'https://western.com.ph', '/shop/gadgets/smartphones'),
     }
 
     if shop in factory:
