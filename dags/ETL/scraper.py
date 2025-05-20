@@ -12,8 +12,6 @@ from ETL.products import (
     MyPhoneETL,
     PcxETL,
     SavenearnETL,
-    VivoGlobalETL,
-    WesternETL
 )
 
 
@@ -47,8 +45,6 @@ def launch_etl(shop: str, selector: str):
         'MyPhone': MyPhoneETL("MyPhone", 'https://www.myphone.com.ph', '/smartphone'),
         "PCX": PcxETL('PCX', 'https://pcx.com.ph', '/collections/smartphones'),
         "SavenEarn": SavenearnETL("SavenEarn", 'https://savenearn.com.ph', '/collections/smartphone'),
-        'VivoGlobal': VivoGlobalETL("VivoGlobal", 'https://shop.vivoglobal.ph', '/collections/all-phones'),
-        'Western': WesternETL("Western", 'https://western.com.ph', '/shop/gadgets/smartphones'),
     }
 
     if shop in factory:
